@@ -108,44 +108,33 @@ inline Vector3D Normalize(const Vector3D& v) {
 }
 
 struct Matrix3D {
+
 private:
 
-    float m[3][3]{};
+    float m[3][3] {};
 
 public:
 
     Matrix3D() = default;
 
     Matrix3D(float m00, float m01, float m02, float m10, float m11, float m12, float m20, float m21, float m22) {
-        this->m[0][0] = m00;
-        this->m[0][1] = m01;
-        this->m[0][2] = m02;
-        this->m[1][0] = m10;
-        this->m[1][1] = m11;
-        this->m[1][2] = m12;
-        this->m[2][0] = m20;
-        this->m[2][1] = m21;
-        this->m[2][2] = m22;
+        this->m[0][0] = m00; this->m[0][1] = m01; this->m[0][2] = m02;
+        this->m[1][0] = m10; this->m[1][1] = m11; this->m[1][2] = m12;
+        this->m[2][0] = m20; this->m[2][1] = m21; this->m[2][2] = m22;
     }
 
     Matrix3D(const Vector3D& v1, const Vector3D& v2, const Vector3D& v3) {
-        this->m[0][0] = v1.x;
-        this->m[0][1] = v1.y;
-        this->m[0][2] = v1.z;
-        this->m[1][0] = v2.x;
-        this->m[1][1] = v2.y;
-        this->m[1][2] = v2.z;
-        this->m[2][0] = v3.x;
-        this->m[2][1] = v3.y;
-        this->m[2][2] = v3.z;
+        this->m[0][0] = v1.x; this->m[0][1] = v1.y; this->m[0][2] = v1.z;
+        this->m[1][0] = v2.x; this->m[1][1] = v2.y; this->m[1][2] = v2.z;
+        this->m[2][0] = v3.x; this->m[2][1] = v3.y; this->m[2][2] = v3.z;
     }
 
     float& operator () (int i, int j) {
-        return this->m[i][j];
+        return this->m[j][i];
     }
 
     const float& operator () (int i, int j) const {
-        return this->m[i][j];
+        return this->m[j][i];
     }
 
     [[deprecated]]

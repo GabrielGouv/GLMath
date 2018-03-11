@@ -30,7 +30,8 @@ int main() {
     Vector3D v2 = Vector3D(4.0, 5.0, 6.0);
     Vector3D v3 = Vector3D(7.0, 8.0, 9.0);
 
-    Matrix3D matrix3D = Matrix3D(v1, v2, v3);
+    Matrix3D matrix3D = Matrix3D(1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f);
+    //atrix3D matrix3D = Matrix3D(v1, v2, v3);
 
     std::cout << matrix3D(0, 0) << " " << matrix3D(0, 1) << " " << matrix3D(0, 2) << " " << std::endl;
     std::cout << matrix3D(1, 0) << " " << matrix3D(1, 1) << " " << matrix3D(1, 2) << " " << std::endl;
