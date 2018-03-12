@@ -3,4 +3,4 @@ project(math)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(math math.cpp main.cpp)
+add_executable(math src/math.cpp src/main.cpp)

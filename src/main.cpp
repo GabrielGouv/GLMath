@@ -1,6 +1,8 @@
 #include <iostream>
 #include "math.cpp"
 
+using namespace GLMath;
+
 int main() {
 
 //    Vector3D v3 = Vector3D(1.0, 0.0, 0.0);
